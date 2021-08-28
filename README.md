@@ -11,12 +11,11 @@ Other directories are:
 
 
 Overview of files:
-    ./net/modules.py : definition of the CNN structure (torch.nn.Module)
-    ./net/loss_fn.py : definition of loss functions used in the code
-
-    ./preproc/load_data.py : definition & generation of datasets from data
-    ./preproc/distortion.py : definitions of non-torchvision transformation for image preprocessing
-    ./preproc/create_csv_annot.py : script to generate csv-files with path and label information (saved in 'preproc/data_lists') 
+    - ./net/modules.py : definition of the CNN structure (torch.nn.Module)
+    - ./net/loss_fn.py : definition of loss functions used in the code
+    - ./preproc/load_data.py : definition & generation of datasets from data
+    - ./preproc/distortion.py : definitions of non-torchvision transformation for image preprocessing
+    - ./preproc/create_csv_annot.py : script to generate csv-files with path and label information (saved in 'preproc/data_lists') 
 
     ./config.py : configuration file for the code
     ./train_baseline.py : execution file for baseline 
