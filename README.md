@@ -1,6 +1,7 @@
 # MA_Detection_Recocnition_Endoscopic_Videos
 Repository for the master thesis with the title: "Detection and recognition in neurosurgical endoscopic videos" done by Julia Zahner, March - September 2021, CVL ETH Zurich, Supervisor: Prof. Dr. Ender Konukoglu
 
+## Code ##
 **The Code is seperated in three parts:**
 - 'net' directory with all the files defining the neural net structure and losses
 - 'preproc' directory with all the files used for data and preprocessing
@@ -46,7 +47,11 @@ Tu run the Baseline follow the following procedure:
 4. train_baseline.py also includes prediction on the test set, to visualize your results use visualize.py 
 5. Done!
 
+## Visualizations ##
 
+The visualizations (Images, GIFs) mentioned in the report can be found in the "Visualization" folder.
+Images show predictions for frame 10 and 30 of the corresponding test batch for all the conditions.
+GIFs are not generated for all conditions. To generate more images one has to run the "visualize.py" file in the "Code" directory
 
 
 
