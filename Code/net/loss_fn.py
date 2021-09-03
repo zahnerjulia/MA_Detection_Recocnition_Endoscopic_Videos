@@ -95,10 +95,14 @@ class LogisticLoss_section(torch.nn.Module):
     def forward(self, y_hat, y):
         max_pool = torch.nn.MaxPool2d(kernel_size=32)
         bce = torch.nn.BCELoss()
+        thres = torch.nn.Threshold(self.threshold, 0)
 
-        # max pool with kernel size = 32
+        # max pool over image sections
         y_hat_max = max_pool(y_hat)
         y_max = max_pool(y)
+
+        # thresholding (if y_max[i,j,k,l] >= 0.8  then y_max[i,j,k,l] = 1 else y_max[i,j,k,l] =0)
+        y_max = thres(y_max).bool().int().float()
 
         # binary cross entropy loss
         loss = bce(y_hat_max, y_max)
